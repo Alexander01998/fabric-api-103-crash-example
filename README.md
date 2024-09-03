@@ -1,3 +1,7 @@
+**Update:** Mystery solved. This whole crash is just an extra-sneaky cache bug. Run any Gradle command with `--refresh-dependencies` (for example `./gradlew runServer --refresh-dependencies`) and it goes away. Any other method of clearing your cache, like deleting your .gradle folder or deleting the various cache folders in your repository, does not work for some odd reason.
+
+It's unclear why multiple people got the exact same cache bug right after updating to that exact Fabric API version, or which part of the cache actually got corrupted to cause this weird stacktrace, but at this point I can't be bothered to find out. I'm archiving this repo. Feel free to keep digging if you're curios.
+
 # Fabric API 0.103 Crash Example Mod
 
 This is a stripped-down version of WI Zoom that does nothing except print hello world on start. For some reason this, like many other mods, crashes when used with Fabric API 0.103+1.21.1 but works fine if you downgrade to 0.102.1.
